@@ -21,4 +21,4 @@ const dice = new Dice(2, 5, 6);
 console.log(dice.roll());
 
 const oball = new Oball()
-console.log(oball.ask())
+console.log(oball.ask("¿Hello world está pasado de moda?"))

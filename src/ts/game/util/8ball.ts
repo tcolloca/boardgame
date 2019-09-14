@@ -18,9 +18,21 @@ const responses: string[] = [
     "No cuentes con ello."
 ]
 
+/**
+*8ball class but with an "O" instead "8" 
+*/
 export class Oball {
-    ask(): string {
-        let response = responses[Math.floor(Math.random() * responses.length)]
-        return response
+    /**
+    * Select random answer
+    * 
+    * @param {string} question The question en cuestión
+    * @return {string} A random response, or "No hiciste una pregunta" if there is no question
+    */
+    ask(question: string): string {
+        if(!question) return "No hiciste una pregunta"
+        else {
+            let response = responses[Math.floor(Math.random() * responses.length)]
+            return response
+        }
     }
 } 
