@@ -7,7 +7,7 @@ export class Game {
    *
    * @param {string} message Message to display.
    */
-  public test(message: string): void {
+  test(message: string): void {
     console.log(message);
   }
 }

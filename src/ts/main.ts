@@ -7,9 +7,9 @@ import {Oball} from './game/util/8ball';
  */
 class Main {
   /**
-  * Runs an example.
-  */
-  public run(): void {
+   * Runs an example.
+   */
+  run(): void {
     new Game().test('Hello world!');
   }
 }
