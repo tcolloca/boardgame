@@ -6,7 +6,7 @@ class Die {
         this.sides = sides;
     }
     roll() {
-        return random.int(1, this.sides + 1);
+        return random.int(1, this.sides);
     }
 }
 exports.Die = Die;

@@ -1,5 +1,5 @@
 import { Game } from "./game/game";
-import { Die } from "./game/util/die";
+import { Dice } from "./game/util/dice";
 
 class Main {
 
@@ -11,7 +11,5 @@ class Main {
 let main = new Main();
 main.run();
 
-let die = new Die();
-console.log(die.roll());
-let die2sided = new Die(2);
-console.log(die2sided.roll());
+let dice = new Dice(2, 5, 6);
+console.log(dice.roll());
