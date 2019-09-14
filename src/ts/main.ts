@@ -3,9 +3,9 @@ import { Dice } from "./game/util/dice";
 
 class Main {
 
-  public run(): void {
-    new Game().test("Hello world!");
-  }	
+    public run(): void {
+        new Game().test("Hello world!");
+    }
 }
 
 let main = new Main();
