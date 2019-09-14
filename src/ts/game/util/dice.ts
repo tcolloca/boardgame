@@ -1,14 +1,26 @@
-import { Die } from "./die";
+import {Die} from './die';
 
+/**
+ * A set of dice.
+ */
 export class Dice {
+  private dice: Die[];
 
-    private dice: Die[];
+  /**
+   * Creates a set of dice with the given sides.
+   *
+   * @param {number[]} sides Sides of the dice.
+   */
+  constructor(...sides: number[]) {
+    this.dice = sides.map((side) => new Die(side));
+  }
 
-    constructor(...sides: number[]) {
-        this.dice = sides.map(side => new Die(side));
-    }
-
-    roll(): number[] {
-        return this.dice.map(die => die.roll());
-    }
+  /**
+   * Rolls all the dice.
+   *
+   * @return {number[]} The rolled numbers.
+   */
+  roll(): number[] {
+    return this.dice.map((die) => die.roll());
+  }
 }
