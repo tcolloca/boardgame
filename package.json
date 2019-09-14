@@ -4,6 +4,7 @@
   "description": "A boardgame",
   "main": "main.js",
   "dependencies": {
+    "@types/random": "^2.1.0",
     "random": "^2.1.1",
     "typescript": "^3.6.3"
   },

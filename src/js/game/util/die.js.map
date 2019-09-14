@@ -1,0 +1,1 @@
+{"version":3,"file":"die.js","sourceRoot":"","sources":["../../../ts/game/util/die.ts"],"names":[],"mappings":";;AAAA,iCAAiC;AAEjC,MAAa,GAAG;IAGf,YAAY,QAAgB,CAAC;QACxB,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC;IACxB,CAAC;IAEM,IAAI;QACV,OAAO,MAAM,CAAC,GAAG,CAAC,CAAC,EAAE,IAAI,CAAC,KAAK,GAAG,CAAC,CAAC,CAAC;IACtC,CAAC;CACD;AAVD,kBAUC"}
