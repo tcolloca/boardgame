@@ -88,4 +88,4 @@ typings/
 .dynamodb/
 
 # Don't include js files
-src/js/
+build/
