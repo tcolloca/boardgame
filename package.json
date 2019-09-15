@@ -4,21 +4,27 @@
   "description": "A boardgame",
   "main": "main.js",
   "dependencies": {
+    "@momothepug/tsmodule-alias": "^1.0.0",
     "@types/random": "^2.1.0",
+    "module-alias": "^2.2.1",
     "random": "^2.1.1"
   },
   "devDependencies": {
+    "@types/jasmine": "^3.4.0",
     "@types/node": "^10.0.3",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "eslint": "^6.4.0",
     "eslint-config-google": "^0.14.0",
+    "jasmine": "^3.4.0",
     "pre-commit": "^1.2.2",
     "prettier-eslint": "^9.0.0",
+    "ts-node": "^8.3.0",
     "typescript": "~3.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node": "ts-node",
+    "test": "ts-node -- node_modules/jasmine/bin/jasmine",
     "compile": "tsc -p .",
     "prettier": "prettier --config dev/config/.prettierrc.json",
     "eslint": "eslint --config dev/config/.eslintrc.json",
@@ -37,5 +43,8 @@
   "homepage": "https://github.com/tcolloca/boardgame#readme",
   "pre-commit": [
     "lintall"
-  ]
+  ],
+  "_moduleAliases": {
+   "@game": "build/game"
+  }
 }

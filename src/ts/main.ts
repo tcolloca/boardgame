@@ -1,6 +1,9 @@
-import {Game} from './game/game';
-import {Dice} from './game/util/dice';
-import {Oball} from './game/util/8ball';
+// Set up path aliases.
+import 'module-alias/register';
+
+import {Game} from '@game/game';
+import {Dice} from '@game/util/dice';
+import {Oball} from '@game/util/8ball';
 
 /**
  * A Main class to test progress.
