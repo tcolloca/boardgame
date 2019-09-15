@@ -1,6 +1,6 @@
 import {Game} from './game/game';
 import {Dice} from './game/util/dice';
-import {Oball} from './game/util/8ball'; 
+import {Oball} from './game/util/8ball';
 
 /**
  * A Main class to test progress.
@@ -20,5 +20,5 @@ main.run();
 const dice = new Dice(2, 5, 6);
 console.log(dice.roll());
 
-const oball = new Oball()
-console.log(oball.ask("¿Hello world está pasado de moda?"))
+const oball = new Oball();
+console.log(oball.ask('¿Hello world está pasado de moda?'));
