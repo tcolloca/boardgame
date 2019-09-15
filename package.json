@@ -20,8 +20,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "tsc -p .",
-    "prettier": "prettier --write src/ts/**/*",
-    "lint": "eslint --fix src/ts/**/*"
+    "prettier": "prettier --config dev/config/.prettierrc.json",
+    "eslint": "eslint --config dev/config/.eslintrc.json",
+    "lintall": "npm run prettier -- --check src/ts/**/* && npm run eslint -- src/ts/**/*",
+    "lintfixall": "npm run prettier -- --write src/ts/**/* && npm run eslint -- --fix src/ts/**/*"
   },
   "repository": {
     "type": "git",
@@ -34,7 +36,6 @@
   },
   "homepage": "https://github.com/tcolloca/boardgame#readme",
   "pre-commit": [
-    "prettier",
-    "lint"
+    "lintall"
   ]
 }
