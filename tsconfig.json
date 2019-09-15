@@ -4,10 +4,18 @@
         "module": "commonjs",
         "sourceMap": true,
         "target": "es6",
-        "outDir": "build"
+        "outDir": "build",
+        "baseUrl": "src/ts",
+        "paths": {
+          "@game/*": [
+            "game/*"
+          ],
+        }
     },    
     "include": [
-        "**/*.ts",
         "**/*.ts"
     ],
+    "exclude": [
+        "**/*_test.ts"
+    ]
 }
