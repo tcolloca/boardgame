@@ -1,4 +1,4 @@
-import {Die} from '@game/util/die';
+import {Die} from '@root/game/util/die';
 
 /**
  * A set of dice.

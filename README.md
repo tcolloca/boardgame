@@ -2,14 +2,32 @@
 
 ## How to run
 
+`npm run run`
+
+Or to compile and run:
+
 ```
 npm run compile
 node build/main.js
 ```
 
+Individual TS files can be run with ts-node. Example:
+
+`ts-node src/ts/main.ts`
+
+## Tests
+
+Tests are using Chai+Mocha. You can run all tests with:
+
+`npm run testall`
+
+You can also run individual tests using ts-mocha. Example:
+
+`ts-mocha src/test/ts/game/util/die_test.ts`
+
 ## Pre-commits
 
-Make sure to run the linter and pre-commit tests before sending your pull request. 
+Make sure to run the linter and pre-commit tests before sending your pull request.
 
 ### Lint
 
@@ -43,6 +61,3 @@ To display existing lint errors:
 To fix all existing errors:
 
 `npm run eslint -- --fix src/ts/**/*`
-
-### Tests
-

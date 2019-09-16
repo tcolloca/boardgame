@@ -1,9 +1,10 @@
-// Set up path aliases.
-import 'module-alias/register';
+// We need to set up the path alias manually so that ir works in js and ts.
+import * as moduleAlias from 'module-alias';
+moduleAlias.addAlias('@root', __dirname);
 
-import {Game} from '@game/game';
-import {Dice} from '@game/util/dice';
-import {Oball} from '@game/util/8ball';
+import {Game} from '@root/game/game';
+import {Dice} from '@root/game/util/dice';
+import {Oball} from '@root/game/util/8ball';
 
 /**
  * A Main class to test progress.
