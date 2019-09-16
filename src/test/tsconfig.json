@@ -1,20 +1,18 @@
 {
   "compilerOptions": {
-    "rootDir": "src/ts",
     "module": "commonjs",
     "target": "es6",
-    "outDir": "build",
-    "baseUrl": "src",
+    "baseUrl": "..",
     "paths": {
       "@root/*": [
         "ts/*"
+      ],
+      "@test/*": [
+        "test/ts/*"
       ]
     }
   },
   "include": [
-    "src/ts/**/*.ts"
-  ],
-  "exclude": [
-    "src/test/**/*_test.ts"
+    "../**/*.ts"
   ]
 }
