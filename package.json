@@ -5,9 +5,13 @@
   "main": "main.js",
   "dependencies": {
     "@momothepug/tsmodule-alias": "^1.0.0",
+    "@types/google-protobuf": "^3.7.1",
     "@types/random": "^2.1.0",
+    "google-protobuf": "^3.10.0-rc.1",
     "module-alias": "^2.2.1",
-    "random": "^2.1.1"
+    "protobufjs": "^6.8.8",
+    "random": "^2.1.1",
+    "ts-protoc-gen": "^0.11.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.2",
@@ -27,15 +31,16 @@
     "typescript": "~3.5.0"
   },
   "scripts": {
-    "ts-node": "ts-node",
-    "compile": "tsc -p .",
-    "run": "npm run compile && node build/main.js",
+    "protoc": "protoc --proto_path=\"src/proto\" --js_out=\"import_style=commonjs,binary:src/genfiles\" --ts_out=\"src/genfiles\" \"game/util/card.proto\"",
+    "ts-node": "npm run protoc && ts-node",
+    "compile": "npm run protoc && tsc -p .",
+    "run": "npm run compile && node build/game/main.js",
     "ts-mocha": "ts-mocha",
     "testall": "ts-mocha src/test/**/*_test.ts",
     "prettier": "prettier --config dev/config/.prettierrc.json",
     "eslint": "eslint --config dev/config/.eslintrc.json",
-    "lintall": "npm run prettier -- --check src/ts/**/* && npm run eslint -- src/ts/**/*",
-    "lintfixall": "npm run prettier -- --write src/ts/**/* && npm run eslint -- --fix src/ts/**/*"
+    "lintall": "npm run prettier -- --check src/game/**/* && npm run eslint -- src/game/**/* src/test/game/**/*",
+    "lintfixall": "npm run prettier -- --write src/game/**/* && npm run eslint -- --fix src/game/**/* src/test/game/**/*"
   },
   "repository": {
     "type": "git",
@@ -52,7 +57,8 @@
     "testall"
   ],
   "_moduleAliases": {
-    "@root": "src/ts",
-    "@test": "src/test/ts"
+    "@genfiles": "src/genfiles",
+    "@root": "src",
+    "@test": "src/test"
   }
 }
