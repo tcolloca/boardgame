@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+// A game card.
+message Card {
+  enum Type {
+  	// Do not use. Default for undefined type.
+  	TYPE_UNDEFINED = 0;
+  }
+
+  // Id of the card.
+  int32 id = 1;
+  // Name of the card.
+  string name = 2;
+  // Description of the card.
+  string description = 3;
+  // Type of the card.
+  Type type = 4;
+}

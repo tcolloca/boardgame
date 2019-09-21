@@ -5,10 +5,10 @@
     "baseUrl": "..",
     "paths": {
       "@root/*": [
-        "ts/*"
+        "*"
       ],
       "@test/*": [
-        "test/ts/*"
+        "test/*"
       ]
     }
   },
