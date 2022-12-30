@@ -23,7 +23,7 @@
     "chai": "^4.2.0",
     "eslint": "^6.4.0",
     "eslint-config-google": "^0.14.0",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "pre-commit": "^1.2.2",
     "prettier-eslint": "^9.0.0",
     "ts-mocha": "^6.0.0",
